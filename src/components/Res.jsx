@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -87,12 +86,12 @@ const App = () => {
               <tbody>
                 {sortedEvaluations.map((evaluation, index) => (
                   <tr key={index} className="hover:bg-blue-50">
-                    <td className="py-2 px-4 border-b">{evaluation._id}</td>
-                    <td className="py-2 px-4 border-b">{evaluation.totalScore}</td>
-                    <td className="py-2 px-4 border-b">{evaluation.numberOfEvaluations}</td>
-                    <td className="py-2 px-4 border-b">
+                    <td className="py-2 px-4 border-b text-sm">{evaluation._id}</td>
+                    <td className="py-2 px-4 border-b text-sm">{evaluation.totalScore}</td>
+                    <td className="py-2 px-4 border-b text-sm">{evaluation.numberOfEvaluations}</td>
+                    <td className="py-2 px-4 border-b text-sm">
                       {evaluation.evaluators.map((evaluator, i) => (
-                        <div key={i} className="text-gray-700">
+                        <div key={i} className="text-gray-700 text-xs md:text-sm">
                           {evaluator.username}: {evaluator.scores.join(', ')}
                         </div>
                       ))}
