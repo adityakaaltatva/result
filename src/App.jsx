@@ -1,4 +1,6 @@
-import Final from "./components/final"
+import Final from "./components/final";
+import Res from "./components/Res";
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -8,6 +10,7 @@ const App = () => {
       <Routes>
         
         <Route path="/final" element={<Final />} />
+        <Route path="/res" element={<Res />}/>
       </Routes>
     </Router>
   )
