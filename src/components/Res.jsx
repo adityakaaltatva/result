@@ -12,7 +12,7 @@ const App = () => {
     try {
       setLoading(true);
       setError('');
-      const response = await axios.get('http://localhost:5000/api/evaluations/');
+      const response = await axios.get('https://result-510q.onrender.com/api/evaluations');
       setEvaluations(response.data);
     } catch (err) {
       console.error('Error:', err);
